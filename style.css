@@ -1,56 +1,69 @@
+/* 🌑 FUNDO mais bonito */
 body {
   margin: 0;
-  background: #0a0a0a;
-  color: white;
   font-family: Arial;
-  text-align: center;
-}
-
-h1 {
-  margin-top: 100px;
-  font-size: 40px;
-  color: violet;
-}
-
-p {
-  opacity: 0.8;
-}
-
-a {
   color: white;
-  text-decoration: none;
-  margin: 10px;
-  padding: 8px 15px;
-  border: 1px solid violet;
-  border-radius: 6px;
-  transition: 0.3s;
+  background: radial-gradient(circle at top, #1a001f, #000000);
 }
 
-a:hover {
-  background: violet;
-}
-/* MENU TOPO */
+/* 🧊 MENU estilo "glass" */
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: rgba(0,0,0,0.7);
-  border-bottom: 1px solid violet;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 0, 255, 0.3);
 }
 
-/* Logo */
+/* 🌑 Logo */
 .logo {
   color: violet;
-  font-size: 20px;
+  font-size: 22px;
+  letter-spacing: 2px;
 }
 
-/* Links do menu */
+/* 🔗 Links */
 .links a {
   margin-left: 15px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-/* Conteúdo */
+/* ✨ Hover suave */
+.links a:hover {
+  background: rgba(255, 0, 255, 0.2);
+}
+
+/* 📦 Conteúdo */
 .conteudo {
-  margin-top: 100px;
+  margin-top: 120px;
+  text-align: center;
+}
+
+/* 🌟 Título com brilho */
+h1 {
+  font-size: 45px;
+  color: violet;
+  text-shadow: 0 0 10px violet;
+}
+
+/* 🌀 Animação leve */
+h1 {
+  animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
