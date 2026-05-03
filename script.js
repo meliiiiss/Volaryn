@@ -7,3 +7,7 @@ function tocarMusica() {
     musica.pause();
   }
 }
+function ativarSom() {
+  let fog = document.getElementById("fog");
+  fog.play();
+}
