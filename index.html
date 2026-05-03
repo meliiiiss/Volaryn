@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Volaryn - Sistema de Login">
-    <title>Volaryn - Entrar</title>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
-<body>
-    <main class="login-page">
-        <section class="login-container">
-            <h1>Entrar em Volaryon</h1>
-            
-            <form id="loginForm" class="login-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Usuário" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Senha" required>
-                </div>
-                <button type="submit" class="btn-login">Entrar</button>
-            </form>
-        </section>
-    </main>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volaryon RPG</title>
 
-    <!-- Scripts -->
-    <script src="js/script.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Libre+Baskerville&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="musica" loop>
+  <source src="audio/theme.mp3" type="audio/mp3">
+</audio>
+
+<header>
+  <h1>🌑 Volaryon RPG</h1>
+  <p>Um mundo onde sombras respiram</p>
+</header>
+
+<section class="menu">
+  <a href="racas.html">Raças</a>
+  <a href="classes.html">Classes</a>
+</section>
+
+<button onclick="tocarMusica()">🎵 Tocar Música</button>
+
+<script src="script.js"></script>
 </body>
 </html>
