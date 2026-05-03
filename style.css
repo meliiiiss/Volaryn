@@ -61,15 +61,6 @@ h1, h2, h3 {
   flex: 1 1 300px;
 }
 
-/* 🧊 CARD BASE (IMPORTANTE) */
-.card {
-  background: rgba(15, 15, 25, 0.8);
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-}
-
 /* ✨ LINHA DECORATIVA */
 .card h2 {
   border-bottom: 1px solid rgba(255, 215, 0, 0.3);
