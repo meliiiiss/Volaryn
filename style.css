@@ -1,1 +1,31 @@
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
 
+h1 {
+  margin-top: 100px;
+  font-size: 40px;
+  color: violet;
+}
+
+p {
+  opacity: 0.8;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  padding: 8px 15px;
+  border: 1px solid violet;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: violet;
+}
