@@ -29,3 +29,28 @@ a {
 a:hover {
   background: violet;
 }
+/* MENU TOPO */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.7);
+  border-bottom: 1px solid violet;
+}
+
+/* Logo */
+.logo {
+  color: violet;
+  font-size: 20px;
+}
+
+/* Links do menu */
+.links a {
+  margin-left: 15px;
+}
+
+/* Conteúdo */
+.conteudo {
+  margin-top: 100px;
+}
