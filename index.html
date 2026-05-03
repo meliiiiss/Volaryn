@@ -10,6 +10,41 @@
 <title>Volaryon</title>
 </head>
 <body>
+  <script>
+const lines = [
+  "Antes do tempo… não havia forma.",
+  "Antes da luz… não havia nome.",
+  "Apenas a Névoa Primordial existia."
+];
+
+const p1 = document.getElementById("line1");
+const p2 = document.getElementById("line2");
+const p3 = document.getElementById("line3");
+const btn = document.getElementById("enterBtn");
+
+function showLine(el, text, delay) {
+  setTimeout(() => {
+    el.textContent = text;
+    el.style.opacity = 1;
+  }, delay);
+}
+
+showLine(p1, lines[0], 1000);
+showLine(p2, lines[1], 3500);
+showLine(p3, lines[2], 6000);
+
+setTimeout(() => {
+  btn.style.opacity = 1;
+}, 9000);
+
+btn.addEventListener("click", () => {
+  document.getElementById("intro").style.opacity = "0";
+
+  setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+  }, 1500);
+});
+  </script>
 <div id="intro">
 
   <div class="fog"></div>
