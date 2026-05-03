@@ -15,3 +15,4 @@ document.addEventListener("click", function () {
   let fog = document.getElementById("fog");
   fog.play();
 }, { once: true });
+
