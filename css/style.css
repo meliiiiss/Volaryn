@@ -1,35 +1,34 @@
 body {
   margin: 0;
   font-family: 'Libre Baskerville', serif;
-  background: black;
-  color: white;
+  background: radial-gradient(circle at top, #120018, #000000 70%);
+  color: #e6d3a3;
   text-align: center;
+  overflow-x: hidden;
 }
 
-header {
-  padding: 30px;
-  background: #0d0d0d;
-  border-bottom: 2px solid purple;
-}
-
-h1 {
+/* 🌟 TÍTULOS COM GLÓRIA (estilo personagem épico) */
+h1, h2, h3 {
   font-family: 'Cinzel', serif;
+  color: gold;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3),
+               0 0 25px rgba(138, 43, 226, 0.2);
+  letter-spacing: 1px;
 }
 
-.menu a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background: purple;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
+/* 🌫️ FUNDO COM ATMOSFERA */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+  opacity: 0.08;
+  pointer-events: none;
 }
 
-.card {
-  background: #111;
-  margin: 20px;
-  padding: 20px;
-  border-left: 4px solid purple;
-  border-radius: 10px;
-}
+/* 🧊 HEADER ESTILIZADO */
+header {
+  padding: 40px 20px;
+  background: rgba(10, 0, 20, 0.6);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  backdrop
