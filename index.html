@@ -55,7 +55,15 @@ const p1 = document.getElementById("line1");
 const p2 = document.getElementById("line2");
 const p3 = document.getElementById("line3");
 const btn = document.getElementById("enterBtn");
+const sound = document.getElementById("bgSound");
 
+// 🔊 ativa o som no primeiro clique (obrigatório no navegador)
+document.addEventListener("click", () => {
+  if (sound) {
+    sound.volume = 0.15; // baixo e ambiente
+    sound.play();
+  }
+}, { once: true });
 // ✍️ TYPEWRITER
 function typeText(element, text, delay, callback) {
   let index = 0;
