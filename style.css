@@ -1,69 +1,66 @@
-/* 🌑 FUNDO mais bonito */
+/* 🌑 FUNDO GERAL */
 body {
   margin: 0;
-  font-family: Arial;
-  color: white;
-  background: radial-gradient(circle at top, #1a001f, #000000);
+  background: radial-gradient(circle at top, #0a0a0f, #000000);
+  color: #e6d3a3;
+  font-family: 'Libre Baskerville', serif;
 }
 
-/* 🧊 MENU estilo "glass" */
+/* 🔤 FONTES */
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  color: gold;
+}
+
+/* 📦 MENU */
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
 
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-
-  border-bottom: 1px solid rgba(255, 0, 255, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
 }
 
-/* 🌑 Logo */
+/* Logo */
 .logo {
-  color: violet;
   font-size: 22px;
-  letter-spacing: 2px;
+  color: gold;
 }
 
-/* 🔗 Links */
+/* Links */
 .links a {
   margin-left: 15px;
   padding: 8px 12px;
+  text-decoration: none;
+  color: #e6d3a3;
   border-radius: 6px;
   transition: 0.3s;
 }
 
-/* ✨ Hover suave */
+/* Hover */
 .links a:hover {
-  background: rgba(255, 0, 255, 0.2);
+  background: rgba(255, 215, 0, 0.2);
 }
 
-/* 📦 Conteúdo */
+/* 📦 CONTEÚDO */
 .conteudo {
-  margin-top: 120px;
+  padding: 40px;
   text-align: center;
 }
 
-/* 🌟 Título com brilho */
-h1 {
-  font-size: 45px;
-  color: violet;
-  text-shadow: 0 0 10px violet;
+/* 🧊 CARD BASE (IMPORTANTE) */
+.card {
+  background: rgba(15, 15, 25, 0.8);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 
-/* 🌀 Animação leve */
-h1 {
-  animation: aparecer 1s ease-in-out;
-}
-
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ✨ LINHA DECORATIVA */
+.card h2 {
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  padding-bottom: 5px;
 }
