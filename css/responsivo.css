@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+    .login-container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+
+    .login-container h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px 15px;
+        margin: 10px;
+    }
+
+    .login-container h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-group input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .btn-login {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
