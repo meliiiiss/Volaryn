@@ -1,5 +1,8 @@
+// 🎵 CONTROLE DE MÚSICA
 function tocarMusica() {
-  let musica = document.getElementById("musica");
+  const musica = document.getElementById("musica");
+
+  if (!musica) return;
 
   if (musica.paused) {
     musica.play();
@@ -7,15 +10,55 @@ function tocarMusica() {
     musica.pause();
   }
 }
-function ativarSom() {
-  let fog = document.getElementById("fog");
+
+// 🌫️ SOM DE AMBIENTE (fog)
+function ativarSomAmbiente() {
+  const fog = document.getElementById("fog");
+
+  if (!fog) return;
+
+  fog.volume = 0.3;
   fog.play();
 }
+
+// 🎬 ENTRADA CINEMATOGRÁFICA
+function entrarSite() {
+  const intro = document.getElementById("intro");
+  const musica = document.getElementById("musica");
+  const fog = document.getElementById("fog");
+
+  if (!intro) return;
+
+  // Fade suave
+  intro.style.opacity = "0";
+
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 1000);
+
+  // Ativar sons
+  if (musica) {
+    musica.volume = 0.5;
+    musica.play();
+  }
+
+  if (fog) {
+    fog.volume = 0.3;
+    fog.play();
+  }
+}
+
+// 🔊 LIBERA SOM AUTOMÁTICO (necessário em celular)
 document.addEventListener("click", function () {
-  let fog = document.getElementById("fog");
-  fog.play();
+  const fog = document.getElementById("fog");
+
+  if (fog) {
+    fog.play();
+  }
 }, { once: true });
 
-function entrarSite() {
-  document.getElementById("intro").style.display = "none";
-}
+
+// 🎮 FUTURO: espaço para funções do RPG
+// exemplo:
+// function iniciarJogo() {}
+// function carregarPersonagem() {}
