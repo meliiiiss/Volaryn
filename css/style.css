@@ -76,3 +76,74 @@ button:hover {
 .red-transition.active {
   transform: translate(-50%, -50%) scale(200);
 }
+/* 💧 GOTA DE SANGUE */
+.blood-drop {
+  position: fixed;
+  top: -50px;
+  left: 50%;
+  width: 20px;
+  height: 30px;
+  background: red;
+  border-radius: 50% 50% 60% 60%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  opacity: 0;
+}
+
+/* 💥 ESPALHAMENTO */
+.blood-splash {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, red, darkred, transparent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  opacity: 0;
+}
+
+/* 🌀 CÍRCULO DE LIMPEZA */
+.reveal-circle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: black;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+/* 🔥 ANIMAÇÕES */
+.drop-anim {
+  animation: drop 0.6s ease-in forwards;
+}
+
+.splash-anim {
+  animation: splash 0.6s ease-out forwards;
+}
+
+.reveal-anim {
+  animation: reveal 1.2s ease-in forwards;
+}
+
+/* 💧 QUEDA */
+@keyframes drop {
+  0% { top: -50px; opacity: 0; }
+  100% { top: 50%; opacity: 1; }
+}
+
+/* 💥 EXPLOSÃO */
+@keyframes splash {
+  0% { width: 0; height: 0; opacity: 0; }
+  100% { width: 300px; height: 300px; opacity: 1; }
+}
+
+/* 🌀 LIMPAR TELA */
+@keyframes reveal {
+  0% { width: 0; height: 0; }
+  100% { width: 3000px; height: 3000px; }
+}
