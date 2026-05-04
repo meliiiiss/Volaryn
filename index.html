@@ -21,9 +21,8 @@
 
 <body>
 
-<!-- INTRO -->
+<!-- 🌑 INTRO -->
 <div id="intro">
-
   <div class="fog"></div>
 
   <div class="intro-text">
@@ -31,34 +30,11 @@
     <p>Um mundo onde sombras respiram</p>
     <p>Seu destino começa agora...</p>
 
-    <button id="enterBtn" onclick="entrarSite()">
-      Entrar em Volaryon
-    </button>
-  </div>
-
-</div>
-
-<!-- SITE ESCONDIDO -->
-<div id="site" class="site">
-
-<header>
-  <h1>🌑 Volaryon RPG</h1>
-  <p>Um mundo onde sombras respiram</p>
-</header>
-
-<div class="game-ui">
-  <div class="menu-jogo">
-    <h2>MENU</h2>
-
-    <button onclick="tocarMusica()">🎵 Tocar Música</button>
-    <button>🔐 Entrar</button>
-    <button>⚙️ Configurações</button>
+    <button id="enterBtn" onclick="entrarSite()">Entrar</button>
   </div>
 </div>
 
-</div>
-
-<!-- 🎵 ÁUDIO -->
+<!-- 🎵 ÁUDIOS -->
 <audio id="fog" loop>
   <source src="assets/fog.mp3" type="audio/mp3">
 </audio>
@@ -67,20 +43,26 @@
   <source src="audio/theme.mp3" type="audio/mp3">
 </audio>
 
-<!-- 🌑 CONTEÚDO DO SITE -->
-<header>
-  <h1>🌑 Volaryon RPG</h1>
-  <p>Um mundo onde sombras respiram</p>
-</header>
+<audio id="portalSound">
+  <source src="assets/portal.mp3" type="audio/mp3">
+</audio>
 
-<div class="game-ui">
-  <div class="menu-jogo">
-    <h2>MENU</h2>
+<!-- 🌑 SITE (COMEÇA ESCONDIDO) -->
+<div id="site" style="display:none;">
+  
+  <header>
+    <h1>🌑 Volaryon RPG</h1>
+    <p>Um mundo onde sombras respiram</p>
+  </header>
 
-    <button onclick="tocarMusica()">🎵 Tocar Música</button>
-    <button>🔐 Entrar</button>
-    <button>⚙️ Configurações</button>
+  <div class="game-ui">
+    <div class="menu-jogo">
+      <h2>MENU</h2>
+      <button>🔐 Entrar</button>
+      <button>⚙️ Configurações</button>
+    </div>
   </div>
+
 </div>
 
 <script src="script.js"></script>
