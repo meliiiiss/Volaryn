@@ -54,6 +54,3 @@ button:hover {
   box-shadow: 0 0 10px red;
 }
 
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
