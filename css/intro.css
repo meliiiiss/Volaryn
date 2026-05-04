@@ -22,3 +22,37 @@
   margin-top: 20px;
   padding: 10px 20px;
 }
+/* 🌑 TEXTO INICIAL ESCONDIDO */
+.line {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 1s forwards;
+}
+
+/* cada linha aparece com delay */
+.line:nth-child(1) { animation-delay: 0.5s; }
+.line:nth-child(2) { animation-delay: 1.5s; }
+.line:nth-child(3) { animation-delay: 2.5s; }
+
+/* 🔘 BOTÃO ESCONDIDO NO COMEÇO */
+#btnEntrar {
+  opacity: 0;
+  margin-top: 20px;
+  padding: 10px 20px;
+  animation: showButton 1s forwards;
+  animation-delay: 4s;
+}
+
+/* ✨ animações */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes showButton {
+  to {
+    opacity: 1;
+  }
+}
