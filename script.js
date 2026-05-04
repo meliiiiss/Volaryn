@@ -4,5 +4,9 @@ function entrarSite() {
   document.getElementById("site").style.display = "block";
 
   const musica = document.getElementById("musica");
-  musica.play();
+  musica.volume = 0.5;
+
+  musica.play().catch((erro) => {
+    console.log("Erro ao tocar música:", erro);
+  });
 }
