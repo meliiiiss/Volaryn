@@ -24,28 +24,25 @@ function ativarSomAmbiente() {
 // 🎬 ENTRADA CINEMATOGRÁFICA
 function entrarSite() {
   const intro = document.getElementById("intro");
+  const site = document.getElementById("site");
   const musica = document.getElementById("musica");
   const fog = document.getElementById("fog");
 
-  if (!intro) return;
+  // cria portal
+  const portal = document.createElement("div");
+  portal.classList.add("portal");
+  document.body.appendChild(portal);
 
-  // Fade suave
-  intro.style.opacity = "0";
+  // ativa música
+  if (musica) musica.play();
+  if (fog) fog.play();
 
+  // depois do efeito
   setTimeout(() => {
     intro.style.display = "none";
+    site.style.display = "block";
+    portal.remove();
   }, 1000);
-
-  // Ativar sons
-  if (musica) {
-    musica.volume = 0.5;
-    musica.play();
-  }
-
-  if (fog) {
-    fog.volume = 0.3;
-    fog.play();
-  }
 }
 
 // 🔊 LIBERA SOM AUTOMÁTICO (necessário em celular)
