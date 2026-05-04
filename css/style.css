@@ -1,273 +1,60 @@
+/* 🌑 FUNDO */
 body {
   margin: 0;
   font-family: 'Libre Baskerville', serif;
-  background: radial-gradient(circle at top, #120018, #000000 70%);
-  color: #e6d3a3;
-  text-align: center;
-  overflow-x: hidden;
-}
-
-/* 🌟 TÍTULOS COM GLÓRIA (estilo personagem épico) */
-h1, h2, h3 {
-  font-family: 'Cinzel', serif;
-  color: gold;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3),
-               0 0 25px rgba(138, 43, 226, 0.2);
-  letter-spacing: 1px;
-}
-
-/* 🌫️ FUNDO COM ATMOSFERA */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: url("https://www.transparenttextures.com/patterns/dark-matter.png");
-  opacity: 0.08;
-  pointer-events: none;
-}
-
-/* 🧊 HEADER ESTILIZADO */
-header {
-  padding: 40px 20px;
-  background: rgba(10, 0, 20, 0.6);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-  backdrop-filter: blur(6px);
-}
-
-/* 🔮 MENU ESTILO RPG */
-.menu a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 18px;
-  background: rgba(128, 0, 128, 0.3);
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  color: #e6d3a3;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  background: rgba(255, 215, 0, 0.1);
-  transform: scale(1.05);
-}
-
-/* 📦 CARDS ESTILO “PERSONAGEM IMPORTANTE” */
-.card {
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  border-radius: 15px;
-  margin: 20px;
-  padding: 25px;
-  box-shadow: 0 0 20px rgba(138, 43, 226, 0.1);
-  backdrop-filter: blur(6px);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
-}
-
-/* 🎮 BOTÕES RPG */
-button {
-  padding: 10px 20px;
-  background: linear-gradient(45deg, purple, darkmagenta);
-  border: none;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px purple;
-}
-
-/* 📱 RESPONSIVO */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 28px;
-  }
-}
-  .menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: rgba(0, 0, 0, 0.6);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-.logo {
-  color: gold;
-  font-family: 'Cinzel', serif;
-}
-
-.links a {
-  margin-left: 15px;
-  padding: 8px 12px;
-  text-decoration: none;
-  color: #e6d3a3;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.links a:hover {
-  background: rgba(255, 215, 0, 0.2);
-}
-/* 🌑 FUNDO PROFUNDO */
-body {
-  background: radial-gradient(circle at top, #1a0000 0%, #000000 70%);
+  background: radial-gradient(circle at top, #1a0000, #000000 70%);
   color: #d6c7a1;
-  position: relative;
+  text-align: center;
 }
 
-/* TEXTURA SOMBRIA */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-  opacity: 0.12;
-  pointer-events: none;
-}
-
-/* 🔥 TÍTULO ÉPICO */
-h1 {
+/* 🔥 TÍTULOS */
+h1, h2 {
   font-family: 'Cinzel', serif;
   color: #c9a34a;
-  text-shadow:
-    0 0 5px #000,
-    0 0 10px rgba(255, 0, 0, 0.5),
-    0 0 20px rgba(255, 140, 0, 0.3);
-  letter-spacing: 2px;
+  text-shadow: 0 0 10px red;
 }
 
-/* 🧱 MENU PESADO */
-.menu {
-  background: linear-gradient(to bottom, #1a0000, #000);
-  border-bottom: 2px solid #5a0000;
-}
-
-/* LINKS */
-.links a {
-  background: rgba(40, 0, 0, 0.5);
-  border: 1px solid #5a0000;
-  padding: 8px 14px;
-  border-radius: 6px;
-  color: #d6c7a1;
-  transition: 0.3s;
-}
-
-/* HOVER */
-.links a:hover {
-  background: rgba(120, 0, 0, 0.7);
-  box-shadow: 0 0 10px red;
-}
-
-/* 🎮 BOTÃO ESTILO JOGO */
-button {
-  background: linear-gradient(45deg, #3a0000, #8b0000);
-  border: 1px solid #aa0000;
-  color: #f5e6c8;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-/* HOVER BOTÃO */
-button:hover {
-  background: linear-gradient(45deg, #5a0000, #ff0000);
-  box-shadow: 0 0 15px red;
-  transform: scale(1.05);
-}
-
-/* 📦 CAIXAS / CONTEÚDO */
+/* 🧱 HEADER */
 header {
+  padding: 30px;
   background: rgba(20, 0, 0, 0.6);
   border-bottom: 1px solid #5a0000;
-  backdrop-filter: blur(6px);
-  padding: 30px;
 }
-/* 🎮 TELA DE JOGO */
+
+/* 🎮 MENU CENTRAL */
 .game-ui {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: 50px;
 }
 
-/* 🧱 PAINEL CENTRAL */
 .menu-jogo {
   background: rgba(10, 0, 0, 0.8);
   border: 2px solid #5a0000;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
-  text-align: center;
   width: 300px;
 }
 
-/* 🔥 TÍTULO MENU */
-.menu-jogo h2 {
-  color: #c9a34a;
-  margin-bottom: 20px;
-  text-shadow: 0 0 10px red;
-}
-
-/* 🎮 BOTÕES DO MENU */
-.menu-jogo button {
+/* 🎮 BOTÕES */
+button {
   display: block;
   width: 100%;
   margin: 10px 0;
-}
-/* 🌑 INTRO TELA INICIAL */
-#intro {
-  position: fixed;
-  inset: 0;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  padding: 10px;
+  background: linear-gradient(45deg, #3a0000, #8b0000);
+  border: 1px solid #aa0000;
+  color: #f5e6c8;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-/* TEXTO */
-.intro-text {
-  text-align: center;
-  color: #d6c7a1;
-  font-family: 'Cinzel', serif;
+button:hover {
+  background: linear-gradient(45deg, #5a0000, #ff0000);
+  box-shadow: 0 0 10px red;
 }
 
-/* PARÁGRAFOS */
-.intro-text p {
-  margin: 10px 0;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
-}
-
-/* delay entre linhas */
-.intro-text p:nth-child(1) { animation-delay: 0.5s; }
-.intro-text p:nth-child(2) { animation-delay: 1.5s; }
-.intro-text p:nth-child(3) { animation-delay: 2.5s; }
-
-/* BOTÃO */
-.intro-text button {
-  margin-top: 20px;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
-  animation-delay: 3.5s;
-}
-
-/* ANIMAÇÃO */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
+/* 🌑 INTRO */
 #intro {
   position: fixed;
   inset: 0;
@@ -276,4 +63,30 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 99999;
+}
+
+.intro-text {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+}
+
+.intro-text p {
+  margin: 10px 0;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.intro-text p:nth-child(1) { animation-delay: 0.5s; }
+.intro-text p:nth-child(2) { animation-delay: 1.5s; }
+.intro-text p:nth-child(3) { animation-delay: 2.5s; }
+
+.intro-text button {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 3.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
