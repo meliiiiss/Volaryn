@@ -6,11 +6,17 @@ function entrarSite() {
 
   musica.volume = 0.5;
 
-  // força reset antes de tocar
+  // 🔥 garante carregamento correto
   musica.pause();
   musica.currentTime = 0;
+  musica.load();
 
-  musica.play().catch((e) => {
-    console.log("Áudio bloqueado:", e);
-  });
+  // 🎧 tenta tocar no gesto do clique
+  const playPromise = musica.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch((err) => {
+      console.log("Áudio bloqueado pelo navegador:", err);
+    });
+  }
 }
