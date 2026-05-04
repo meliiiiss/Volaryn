@@ -16,3 +16,6 @@ document.addEventListener("click", function () {
   fog.play();
 }, { once: true });
 
+function entrarSite() {
+  document.getElementById("intro").style.display = "none";
+}
