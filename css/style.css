@@ -54,3 +54,7 @@ button:hover {
   box-shadow: 0 0 10px red;
 }
 
+/* 🔒 ESCONDE SITE ATÉ ENTRAR */
+.site {
+  display: none;
+}
