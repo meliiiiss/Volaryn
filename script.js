@@ -1,23 +1,14 @@
+/* 🌑 ENTRADA DO JOGO */
 function entrarSite() {
-  const drop = document.getElementById("bloodDrop");
-  const splash = document.getElementById("bloodSplash");
-  const circle = document.getElementById("revealCircle");
+  const intro = document.getElementById("intro");
+  const site = document.getElementById("site");
 
-  // 🔴 gota cai
-  drop.classList.add("drop-anim");
-
-  setTimeout(() => {
-    // 💥 espalha sangue
-    splash.classList.add("splash-anim");
-  }, 600);
+  // esconde intro
+  intro.style.opacity = "0";
+  intro.style.transition = "0.8s";
 
   setTimeout(() => {
-    // 🌀 círculo limpa e revela o jogo
-    circle.classList.add("reveal-anim");
-  }, 1200);
-
-  setTimeout(() => {
-    document.getElementById("intro").style.display = "none";
-    document.getElementById("site").style.display = "block";
-  }, 2000);
+    intro.style.display = "none";
+    site.style.display = "block";
+  }, 800);
 }
