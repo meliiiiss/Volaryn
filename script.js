@@ -1,58 +1,60 @@
-// 🎵 CONTROLE DE MÚSICA
-function tocarMusica() {
-  const musica = document.getElementById("musica");
-
-  if (!musica) return;
-
-  if (musica.paused) {
-    musica.play();
-  } else {
-    musica.pause();
-  }
-}
-
-// 🌫️ SOM DE AMBIENTE (fog)
-function ativarSomAmbiente() {
-  const fog = document.getElementById("fog");
-
-  if (!fog) return;
-
-  fog.volume = 0.3;
-  fog.play();
-}
-
-// 🎬 ENTRADA CINEMATOGRÁFICA
 function entrarSite() {
   const intro = document.getElementById("intro");
   const site = document.getElementById("site");
+
   const musica = document.getElementById("musica");
   const fog = document.getElementById("fog");
+  const portalSound = document.getElementById("portalSound");
 
-  // 🎵 som
-  if (musica) musica.play();
+  // 🎵 sons
+  if (portalSound) portalSound.play();
   if (fog) fog.play();
+
+  // 🎶 música com fade
+  if (musica) {
+    musica.volume = 0;
+    musica.play();
+
+    let vol = 0;
+    let fade = setInterval(() => {
+      if (vol < 0.5) {
+        vol += 0.02;
+        musica.volume = vol;
+      } else {
+        clearInterval(fade);
+      }
+    }, 100);
+  }
 
   // 🌌 criar portal
   const portal = document.createElement("div");
-  portal.classList.add("portal");
+  portal.className = "portal";
 
   const core = document.createElement("div");
-  core.classList.add("portal-core");
+  core.className = "portal-core";
 
-  const ring = document.createElement("div");
-  ring.classList.add("portal-ring");
+  const ring1 = document.createElement("div");
+  ring1.className = "portal-ring ring1";
 
+  const ring2 = document.createElement("div");
+  ring2.className = "portal-ring ring2";
+
+  const texture = document.createElement("div");
+  texture.className = "portal-texture";
+
+  portal.appendChild(texture);
+  portal.appendChild(ring1);
+  portal.appendChild(ring2);
   portal.appendChild(core);
-  portal.appendChild(ring);
   document.body.appendChild(portal);
 
-  // 💥 partículas
-  for (let i = 0; i < 20; i++) {
+  // partículas
+  for (let i = 0; i < 40; i++) {
     const p = document.createElement("div");
-    p.classList.add("particle");
+    p.className = "particle";
 
-    const x = (Math.random() - 0.5) * 400 + "px";
-    const y = (Math.random() - 0.5) * 400 + "px";
+    const x = (Math.random() - 0.5) * 600 + "px";
+    const y = (Math.random() - 0.5) * 600 + "px";
 
     p.style.setProperty("--x", x);
     p.style.setProperty("--y", y);
@@ -60,30 +62,10 @@ function entrarSite() {
     portal.appendChild(p);
   }
 
-  // 🔥 expansão final
-  setTimeout(() => {
-    core.classList.add("portal-expand");
-  }, 500);
-
-  // 🎬 troca de tela
+  // transição
   setTimeout(() => {
     intro.style.display = "none";
     site.style.display = "block";
     portal.remove();
-  }, 1200);
+  }, 1400);
 }
-
-// 🔊 LIBERA SOM AUTOMÁTICO (necessário em celular)
-document.addEventListener("click", function () {
-  const fog = document.getElementById("fog");
-
-  if (fog) {
-    fog.play();
-  }
-}, { once: true });
-
-
-// 🎮 FUTURO: espaço para funções do RPG
-// exemplo:
-// function iniciarJogo() {}
-// function carregarPersonagem() {}
