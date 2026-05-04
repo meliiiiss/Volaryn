@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <div class="game-ui">
-
-  <div class="menu-jogo">
-    <h2>Menu</h2>
-
-    <button onclick="window.location.href='login.html'">
-      🔐 Entrar
-    </button>
-
-    <button>
-      🎮 Continuar
-    </button>
-
-    <button>
-      ⚙️ Configurações
-    </button>
-  </div>
-
-  </div>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -30,8 +11,9 @@
 </head>
 
 <body>
-  <div id="intro">
 
+<!-- 🌑 INTRO (TELA INICIAL) -->
+<div id="intro">
   <div class="intro-text">
     <p>Bem-vindo a Volaryon</p>
     <p>Um mundo onde sombras respiram</p>
@@ -39,16 +21,9 @@
 
     <button onclick="entrarSite()">Entrar em Volaryon</button>
   </div>
+</div>
 
-  </div>
-<nav class="menu">
-  <div class="logo">🌑 Volaryon</div>
-
-  <div class="links">
-    <a href="index.html">Início</a>
-    <a href="login.html">Entrar</a>
-  </div>
-</nav>
+<!-- 🎵 ÁUDIO -->
 <audio id="fog" loop>
   <source src="assets/fog.mp3" type="audio/mp3">
 </audio>
@@ -57,13 +32,23 @@
   <source src="audio/theme.mp3" type="audio/mp3">
 </audio>
 
+<!-- 🌑 CONTEÚDO DO SITE -->
 <header>
   <h1>🌑 Volaryon RPG</h1>
   <p>Um mundo onde sombras respiram</p>
 </header>
 
-<button onclick="entrarEmVolaryon()">🎵 Tocar Música</button>
+<div class="game-ui">
+  <div class="menu-jogo">
+    <h2>MENU</h2>
+
+    <button onclick="tocarMusica()">🎵 Tocar Música</button>
+    <button>🔐 Entrar</button>
+    <button>⚙️ Configurações</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
-<script src="script.js"></script>
 </html>
