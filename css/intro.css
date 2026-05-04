@@ -73,3 +73,22 @@
 @keyframes fadeIn {
   to { opacity: 1; }
 }
+/* 🌌 EFEITO PORTAL */
+.portal {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,0,0,0.2), black);
+  animation: portalOpen 1s forwards;
+  z-index: 999999;
+}
+
+@keyframes portalOpen {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
