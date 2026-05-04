@@ -268,3 +268,12 @@ header {
     opacity: 1;
   }
 }
+#intro {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
