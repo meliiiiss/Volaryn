@@ -224,3 +224,47 @@ header {
   width: 100%;
   margin: 10px 0;
 }
+/* 🌑 INTRO TELA INICIAL */
+#intro {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* TEXTO */
+.intro-text {
+  text-align: center;
+  color: #d6c7a1;
+  font-family: 'Cinzel', serif;
+}
+
+/* PARÁGRAFOS */
+.intro-text p {
+  margin: 10px 0;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* delay entre linhas */
+.intro-text p:nth-child(1) { animation-delay: 0.5s; }
+.intro-text p:nth-child(2) { animation-delay: 1.5s; }
+.intro-text p:nth-child(3) { animation-delay: 2.5s; }
+
+/* BOTÃO */
+.intro-text button {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 3.5s;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
