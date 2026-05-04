@@ -1,40 +1,23 @@
 function entrarSite() {
-  const intro = document.getElementById("intro");
-  const site = document.getElementById("site");
+  const drop = document.getElementById("bloodDrop");
+  const splash = document.getElementById("bloodSplash");
+  const circle = document.getElementById("revealCircle");
 
-  const portalSound = document.getElementById("portalSound");
-  const musica = document.getElementById("musica");
+  // 🔴 gota cai
+  drop.classList.add("drop-anim");
 
-  // 🎵 SOM
-  if (portalSound) portalSound.play();
-
-  if (musica) {
-    musica.volume = 0;
-    musica.play();
-
-    let vol = 0;
-    let fade = setInterval(() => {
-      if (vol < 0.6) {
-        vol += 0.02;
-        musica.volume = vol;
-      } else {
-        clearInterval(fade);
-      }
-    }, 100);
-  }
-
-  // 🌌 PORTAL
-  const portal = document.createElement("div");
-  portal.className = "portal";
-  document.body.appendChild(portal);
-
-  // 📷 EFEITO DE ENTRAR
-  intro.classList.add("camera-enter");
-
-  // TROCA
   setTimeout(() => {
-    intro.style.display = "none";
-    site.style.display = "block";
-    portal.remove();
+    // 💥 espalha sangue
+    splash.classList.add("splash-anim");
+  }, 600);
+
+  setTimeout(() => {
+    // 🌀 círculo limpa e revela o jogo
+    circle.classList.add("reveal-anim");
+  }, 1200);
+
+  setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("site").style.display = "block";
   }, 2000);
 }
