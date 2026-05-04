@@ -169,3 +169,128 @@
     opacity: 0;
   }
 }
+/* 🌌 PORTAL DIABLO */
+.portal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  pointer-events: none;
+}
+
+/* camada de escurecimento (vinheta) */
+.portal-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.95) 100%);
+  opacity: 0;
+  animation: vignetteIn 0.6s forwards;
+}
+
+/* núcleo */
+.portal-core {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff3b1a, #8b0000 60%, #000 100%);
+  box-shadow:
+    0 0 40px rgba(255,0,0,0.8),
+    0 0 90px rgba(139,0,0,0.6),
+    0 0 140px rgba(255,60,0,0.5);
+  animation: corePulse 0.9s ease-in-out infinite alternate;
+}
+
+/* anéis */
+.portal-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255,80,40,0.6);
+  mix-blend-mode: screen;
+}
+
+.ring1 {
+  width: 260px;
+  height: 260px;
+  animation: spin 1.2s linear infinite;
+}
+
+.ring2 {
+  width: 320px;
+  height: 320px;
+  border-color: rgba(255,0,0,0.4);
+  animation: spinReverse 1.8s linear infinite;
+}
+
+/* textura girando (opcional, dá mais “Diablo feel”) */
+.portal-texture {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  opacity: 0.25;
+  filter: blur(1px);
+  animation: spin 6s linear infinite;
+}
+
+/* partículas */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #ff6a3d, #ff0000);
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow: 0 0 8px red;
+  animation: particleMove 1s forwards;
+}
+
+/* expansão final */
+.portal-expand {
+  animation: expand 0.9s forwards;
+}
+
+/* zoom de câmera no body */
+.camera-zoom {
+  animation: zoomIn 0.9s forwards;
+}
+
+/* ANIMAÇÕES */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes corePulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+@keyframes vignetteIn {
+  to { opacity: 1; }
+}
+
+@keyframes expand {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(8); opacity: 0; }
+}
+
+@keyframes particleMove {
+  to {
+    transform: translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
