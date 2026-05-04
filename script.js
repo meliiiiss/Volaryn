@@ -28,21 +28,49 @@ function entrarSite() {
   const musica = document.getElementById("musica");
   const fog = document.getElementById("fog");
 
-  // cria portal
-  const portal = document.createElement("div");
-  portal.classList.add("portal");
-  document.body.appendChild(portal);
-
-  // ativa música
+  // 🎵 som
   if (musica) musica.play();
   if (fog) fog.play();
 
-  // depois do efeito
+  // 🌌 criar portal
+  const portal = document.createElement("div");
+  portal.classList.add("portal");
+
+  const core = document.createElement("div");
+  core.classList.add("portal-core");
+
+  const ring = document.createElement("div");
+  ring.classList.add("portal-ring");
+
+  portal.appendChild(core);
+  portal.appendChild(ring);
+  document.body.appendChild(portal);
+
+  // 💥 partículas
+  for (let i = 0; i < 20; i++) {
+    const p = document.createElement("div");
+    p.classList.add("particle");
+
+    const x = (Math.random() - 0.5) * 400 + "px";
+    const y = (Math.random() - 0.5) * 400 + "px";
+
+    p.style.setProperty("--x", x);
+    p.style.setProperty("--y", y);
+
+    portal.appendChild(p);
+  }
+
+  // 🔥 expansão final
+  setTimeout(() => {
+    core.classList.add("portal-expand");
+  }, 500);
+
+  // 🎬 troca de tela
   setTimeout(() => {
     intro.style.display = "none";
     site.style.display = "block";
     portal.remove();
-  }, 1000);
+  }, 1200);
 }
 
 // 🔊 LIBERA SOM AUTOMÁTICO (necessário em celular)
