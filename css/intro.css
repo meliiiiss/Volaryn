@@ -92,3 +92,80 @@
     opacity: 0;
   }
 }
+/* 🌌 PORTAL LENDÁRIO */
+.portal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  pointer-events: none;
+}
+
+/* NÚCLEO DO PORTAL */
+.portal-core {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #ff0000, #5a0000, black);
+  box-shadow: 
+    0 0 40px red,
+    0 0 80px darkred,
+    0 0 120px crimson;
+
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+/* ANEL GIRANDO */
+.portal-ring {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,0,0,0.5);
+
+  animation: spin 1s linear infinite;
+}
+
+/* EXPANSÃO FINAL */
+.portal-expand {
+  animation: expand 1s forwards;
+}
+
+/* PARTÍCULAS */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: red;
+  border-radius: 50%;
+  opacity: 0.8;
+
+  animation: particleMove 1s forwards;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+@keyframes expand {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(6); opacity: 0; }
+}
+
+@keyframes particleMove {
+  to {
+    transform: translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
