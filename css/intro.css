@@ -1,18 +1,13 @@
-/* 🌑 INTRO PRINCIPAL */
+/* 🌑 INTRO BASE */
 #intro {
   position: fixed;
   inset: 0;
   background: black;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-
   z-index: 99999;
   overflow: hidden;
-
-  transition: opacity 1s;
 }
 
 /* 🌫️ NEBLINA */
@@ -25,18 +20,15 @@
 }
 
 @keyframes fogMove {
-  from { transform: translateX(0); }
   to { transform: translateX(-200px); }
 }
 
 /* TEXTO */
 .intro-text {
-  color: #e6d3a3;
-  font-family: 'Cinzel', serif;
   text-align: center;
+  color: #d6c7a1;
+  font-family: 'Cinzel', serif;
   z-index: 2;
-  max-width: 600px;
-  padding: 20px;
 }
 
 /* LINHAS */
@@ -52,13 +44,12 @@
 
 /* BOTÃO */
 #enterBtn {
-  margin-top: 30px;
+  margin-top: 25px;
   padding: 12px 25px;
+  border: 1px solid #c9a34a;
   background: transparent;
-  border: 1px solid gold;
-  color: gold;
+  color: #c9a34a;
   cursor: pointer;
-  font-family: 'Cinzel', serif;
 
   opacity: 0;
   animation: fadeIn 2s forwards;
@@ -66,33 +57,10 @@
 }
 
 #enterBtn:hover {
-  background: rgba(255, 215, 0, 0.1);
+  background: rgba(255,215,0,0.1);
 }
 
-/* ANIMAÇÃO */
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-/* 🌌 EFEITO PORTAL */
-.portal {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle, rgba(255,0,0,0.2), black);
-  animation: portalOpen 1s forwards;
-  z-index: 999999;
-}
-
-@keyframes portalOpen {
-  from {
-    transform: scale(0);
-    opacity: 1;
-  }
-  to {
-    transform: scale(3);
-    opacity: 0;
-  }
-}
-/* 🌌 PORTAL LENDÁRIO */
+/* 🌌 PORTAL */
 .portal {
   position: fixed;
   inset: 0;
@@ -100,115 +68,23 @@
   justify-content: center;
   align-items: center;
   z-index: 999999;
-  pointer-events: none;
-}
-
-/* NÚCLEO DO PORTAL */
-.portal-core {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-
-  background: radial-gradient(circle, #ff0000, #5a0000, black);
-  box-shadow: 
-    0 0 40px red,
-    0 0 80px darkred,
-    0 0 120px crimson;
-
-  animation: pulse 1s ease-in-out infinite alternate;
-}
-
-/* ANEL GIRANDO */
-.portal-ring {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,0,0,0.5);
-
-  animation: spin 1s linear infinite;
-}
-
-/* EXPANSÃO FINAL */
-.portal-expand {
-  animation: expand 1s forwards;
-}
-
-/* PARTÍCULAS */
-.particle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: red;
-  border-radius: 50%;
-  opacity: 0.8;
-
-  animation: particleMove 1s forwards;
-}
-
-/* ANIMAÇÕES */
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes pulse {
-  from { transform: scale(1); }
-  to { transform: scale(1.2); }
-}
-
-@keyframes expand {
-  from { transform: scale(1); opacity: 1; }
-  to { transform: scale(6); opacity: 0; }
-}
-
-@keyframes particleMove {
-  to {
-    transform: translate(var(--x), var(--y));
-    opacity: 0;
-  }
-}
-/* 🌌 PORTAL DIABLO */
-.portal {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999999;
-  pointer-events: none;
-}
-
-/* camada de escurecimento (vinheta) */
-.portal-vignette {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.95) 100%);
-  opacity: 0;
-  animation: vignetteIn 0.6s forwards;
 }
 
 /* núcleo */
 .portal-core {
-  position: absolute;
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: radial-gradient(circle, #ff3b1a, #8b0000 60%, #000 100%);
-  box-shadow:
-    0 0 40px rgba(255,0,0,0.8),
-    0 0 90px rgba(139,0,0,0.6),
-    0 0 140px rgba(255,60,0,0.5);
-  animation: corePulse 0.9s ease-in-out infinite alternate;
+  background: radial-gradient(circle, #ff3b1a, #8b0000, black);
+  box-shadow: 0 0 40px red, 0 0 100px darkred;
+  animation: pulse 1s infinite alternate;
 }
 
 /* anéis */
 .portal-ring {
   position: absolute;
   border-radius: 50%;
-  border: 2px solid rgba(255,80,40,0.6);
-  mix-blend-mode: screen;
+  border: 2px solid rgba(255,0,0,0.5);
 }
 
 .ring1 {
@@ -220,19 +96,18 @@
 .ring2 {
   width: 320px;
   height: 320px;
-  border-color: rgba(255,0,0,0.4);
   animation: spinReverse 1.8s linear infinite;
 }
 
-/* textura girando (opcional, dá mais “Diablo feel”) */
+/* textura com sua imagem */
 .portal-texture {
   position: absolute;
   width: 360px;
   height: 360px;
   border-radius: 50%;
-  background: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-  opacity: 0.25;
-  filter: blur(1px);
+  background: url("../assets/portal.jpg");
+  background-size: cover;
+  opacity: 0.35;
   animation: spin 6s linear infinite;
 }
 
@@ -241,46 +116,18 @@
   position: absolute;
   width: 6px;
   height: 6px;
-  background: radial-gradient(circle, #ff6a3d, #ff0000);
+  background: red;
   border-radius: 50%;
-  opacity: 0.9;
-  box-shadow: 0 0 8px red;
   animation: particleMove 1s forwards;
 }
 
-/* expansão final */
-.portal-expand {
-  animation: expand 0.9s forwards;
-}
+/* animações */
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spinReverse { to { transform: rotate(-360deg); } }
+@keyframes pulse { to { transform: scale(1.15); } }
 
-/* zoom de câmera no body */
-.camera-zoom {
-  animation: zoomIn 0.9s forwards;
-}
-
-/* ANIMAÇÕES */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes spinReverse {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
-}
-
-@keyframes corePulse {
-  from { transform: scale(1); }
-  to { transform: scale(1.15); }
-}
-
-@keyframes vignetteIn {
+@keyframes fadeIn {
   to { opacity: 1; }
-}
-
-@keyframes expand {
-  from { transform: scale(1); opacity: 1; }
-  to { transform: scale(8); opacity: 0; }
 }
 
 @keyframes particleMove {
@@ -288,9 +135,4 @@
     transform: translate(var(--x), var(--y));
     opacity: 0;
   }
-}
-
-@keyframes zoomIn {
-  from { transform: scale(1); }
-  to { transform: scale(1.08); }
 }
