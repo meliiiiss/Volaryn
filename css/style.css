@@ -55,7 +55,7 @@ button:hover {
 }
 
 /* 🔒 ESCONDE SITE ATÉ ENTRAR */
-.site {
+#site {
   display: none;
 }
 /* 🔴 TRANSIÇÃO BOLA VERMELHA */
