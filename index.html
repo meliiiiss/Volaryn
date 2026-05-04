@@ -51,6 +51,22 @@
 </div>
 
 <script src="script.js"></script>
-  
+  <div class="red-transition" id="redTransition"></div>
+
+<script>
+function entrarSite() {
+  const intro = document.getElementById("intro");
+  const site = document.getElementById("site");
+  const red = document.getElementById("redTransition");
+
+  // ativa bola vermelha
+  red.classList.add("active");
+
+  setTimeout(() => {
+    intro.style.display = "none";
+    site.style.display = "block";
+  }, 1200);
+}
+</script>c5q
 </body>
 </html>
