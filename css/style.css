@@ -192,3 +192,35 @@ header {
   backdrop-filter: blur(6px);
   padding: 30px;
 }
+/* 🎮 TELA DE JOGO */
+.game-ui {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* 🧱 PAINEL CENTRAL */
+.menu-jogo {
+  background: rgba(10, 0, 0, 0.8);
+  border: 2px solid #5a0000;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+/* 🔥 TÍTULO MENU */
+.menu-jogo h2 {
+  color: #c9a34a;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px red;
+}
+
+/* 🎮 BOTÕES DO MENU */
+.menu-jogo button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
