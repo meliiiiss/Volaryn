@@ -4,48 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>História - Volaryon</title>
+<title>Volaryon RPG</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Libre+Baskerville&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+<nav class="menu">
+  <div class="logo">🌑 Volaryon</div>
+
+  <div class="links">
+    <a href="index.html">Início</a>
+    <a href="login.html">Entrar</a>
+  </div>
+</nav>
+<audio id="fog" loop>
+  <source src="assets/fog.mp3" type="audio/mp3">
+</audio>
+
+<audio id="musica" loop>
+  <source src="audio/theme.mp3" type="audio/mp3">
+</audio>
 
 <header>
-  <h1>📜 A História de Volaryon</h1>
+  <h1>🌑 Volaryon RPG</h1>
+  <p>Um mundo onde sombras respiram</p>
 </header>
 
-<div class="game-ui">
-  <div class="menu-jogo" style="max-width:600px; text-align:left;">
-
-    <h2>O Início</h2>
-
-    <p>
-      Volaryon era um mundo de luz e equilíbrio, governado por antigos guardiões.
-      Mas algo quebrou esse ciclo...
-    </p>
-
-    <p>
-      Sombras começaram a se espalhar pelos reinos, consumindo memórias, terras e almas.
-      Ninguém sabe a origem exata dessa corrupção.
-    </p>
-
-    <p>
-      Agora, apenas alguns sobreviventes resistem.
-      E você... foi chamado para decidir o destino deste mundo.
-    </p>
-
-    <button onclick="irParaJogo()">Continuar Jornada</button>
-
-  </div>
-</div>
-
-<script>
-function irParaJogo() {
-  window.location.href = "index.html";
-}
-</script>
+<button onclick="entrarEmVolaryon()">🎵 Tocar Música</button>
 
 </body>
+<script src="script.js"></script>
 </html>
