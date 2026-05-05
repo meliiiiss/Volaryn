@@ -11,14 +11,19 @@
 </head>
 
 <body>
-<nav class="menu">
-  <div class="logo">🌑 Volaryon</div>
 
-  <div class="links">
-    <a href="index.html">Início</a>
-    <a href="login.html">Entrar</a>
+<!-- 🌑 INTRO (TELA INICIAL) -->
+<div id="intro">
+  <div class="intro-text">
+    <p>Bem-vindo a Volaryon</p>
+    <p>Um mundo onde sombras respiram</p>
+    <p>Seu destino começa agora...</p>
+
+    <button onclick="entrarSite()">Entrar em Volaryon</button>
   </div>
-</nav>
+</div>
+
+<!-- 🎵 ÁUDIO -->
 <audio id="fog" loop>
   <source src="assets/fog.mp3" type="audio/mp3">
 </audio>
@@ -27,13 +32,23 @@
   <source src="audio/theme.mp3" type="audio/mp3">
 </audio>
 
+<!-- 🌑 CONTEÚDO DO SITE -->
 <header>
   <h1>🌑 Volaryon RPG</h1>
   <p>Um mundo onde sombras respiram</p>
 </header>
 
-<button onclick="entrarEmVolaryon()">🎵 Tocar Música</button>
+<div class="game-ui">
+  <div class="menu-jogo">
+    <h2>MENU</h2>
+
+    <button onclick="tocarMusica()">🎵 Tocar Música</button>
+    <button>🔐 Entrar</button>
+    <button>⚙️ Configurações</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
-<script src="script.js"></script>
 </html>
