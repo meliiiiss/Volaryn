@@ -7,49 +7,33 @@
 <title>Volaryon RPG</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Libre+Baskerville&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/intro.css">
 </head>
 
 <body>
+<nav class="menu">
+  <div class="logo">🌑 Volaryon</div>
 
-<!-- 🌑 INTRO -->
-<div id="intro">
-  <div class="intro-text">
-    <p>Bem-vindo a Volaryon</p>
-    <p>Um mundo onde sombras respiram</p>
-    <p>Seu destino começa agora...</p>
-
-    <!-- ✔ CORRIGIDO -->
-    <button onclick="window.location.href='historia.html'">
-      Entrar em Volaryon
-    </button>
+  <div class="links">
+    <a href="index.html">Início</a>
+    <a href="login.html">Entrar</a>
   </div>
-</div>
+</nav>
+<audio id="fog" loop>
+  <source src="assets/fog.mp3" type="audio/mp3">
+</audio>
 
-<!-- 🎵 ÁUDIO (SÓ THEME) -->
-<audio id="theme" loop>
+<audio id="musica" loop>
   <source src="audio/theme.mp3" type="audio/mp3">
 </audio>
 
-<!-- 🌑 CONTEÚDO -->
 <header>
   <h1>🌑 Volaryon RPG</h1>
   <p>Um mundo onde sombras respiram</p>
 </header>
 
-<div class="game-ui">
-  <div class="menu-jogo">
-    <h2>MENU</h2>
-
-    <button onclick="tocarMusica()">🎵 Tocar Música</button>
-    <button>🔐 Entrar</button>
-    <button>⚙️ Configurações</button>
-  </div>
-</div>
-
-<script src="script.js"></script>
+<button onclick="entrarEmVolaryon()">🎵 Tocar Música</button>
 
 </body>
+<script src="script.js"></script>
 </html>
