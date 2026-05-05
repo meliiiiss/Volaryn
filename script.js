@@ -1,4 +1,7 @@
-function entrar() {
+function entrarSite() {
   document.getElementById("intro").style.display = "none";
-  document.getElementById("main").style.display = "block";
+}
+
+function tocarMusica() {
+  document.getElementById("musica").play();
 }
