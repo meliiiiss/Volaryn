@@ -6,48 +6,36 @@
 
 <title>Volaryon RPG</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Libre+Baskerville&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="intro.css">
+<link rel="stylesheet" href="responsive.css">
 
-<!-- 🎨 CSS -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/intro.css">
-<link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
-<!-- 🌑 INTRO -->
+<!-- INTRO -->
 <div id="intro">
-  <div class="intro-text">
+  <h1>🌑 Volaryon</h1>
+  <p>Um mundo esquecido pela luz...</p>
+  <button onclick="entrar()">Entrar</button>
+</div>
 
-    <p class="line">Bem-vindo a Volaryon</p>
-    <p class="line">Um mundo onde sombras respiram</p>
-    <p class="line">Seu destino começa agora...</p>
+<!-- CONTEÚDO PRINCIPAL -->
+<div id="main" style="display:none;">
+  <h2>Bem-vindo ao RPG</h2>
 
-    <!-- 🔘 botão escondido no começo -->
-    <button id="btnEntrar" onclick="entrarSite()">Entrar</button>
+  <a href="login.html">Login</a>
 
+  <div class="container">
+    <div class="card">Raças</div>
+    <div class="card">Classes</div>
+    <div class="card">Mapa</div>
   </div>
 </div>
 
-<!-- 🌑 SITE -->
-<div id="site">
-  <header>
-    <h1>🌑 Volaryon RPG</h1>
-    <p>Um mundo onde sombras respiram</p>
-  </header>
-
-  <div class="game-ui">
-    <div class="menu-jogo">
-      <h2>MENU</h2>
-      <button>🔐 Entrar</button>
-      <button>⚙️ Configurações</button>
-    </div>
-  </div>
-</div>
-<audio id="musica" src="assets/theme.mp3" loop></audio>
-<!-- ⚙️ JAVASCRIPT EXTERNO -->
-<script src="javascript.js"></script>
+<script src="script.js"></script>
+<script src="check.js"></script>
 
 </body>
 </html>
